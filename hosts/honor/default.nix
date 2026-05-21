@@ -809,6 +809,7 @@
         ".config/mozilla/firefox"
         ".config/fish"
         ".config/onlyoffice"
+        ".local/state/containers"
         ".local/share/fish"
         ".local/share/onlyoffice"
         ".local/share/TelegramDesktop"
