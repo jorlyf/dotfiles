@@ -618,6 +618,14 @@
     '';
   };
 
+  programs.git = {
+    enable = true;
+    config.user = {
+        name  = "jorlyf";
+        email = "jorlyfchannel@gmail.com";
+    };
+  };
+
   programs.firefox = {
     enable = true;
   };
