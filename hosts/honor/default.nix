@@ -816,6 +816,7 @@
         ".local/share/zed"
         ".local/state/wireplumber"
         ".local/state/pipewire"
+        "Persistent"
         "Documents" "Downloads" "Pictures" "Videos"
       ];
     };
