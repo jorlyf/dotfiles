@@ -817,7 +817,7 @@
         ".config/mozilla/firefox"
         ".config/fish"
         ".config/onlyoffice"
-        ".local/state/containers"
+        ".local/share/containers"
         ".local/share/fish"
         ".local/share/onlyoffice"
         ".local/share/TelegramDesktop"
