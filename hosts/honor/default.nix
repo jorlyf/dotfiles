@@ -831,6 +831,7 @@
         ".config/fish"
         ".config/onlyoffice"
         ".local/share/containers"
+        ".local/share/keyrings"
         ".local/share/fish"
         ".local/share/onlyoffice"
         ".local/share/TelegramDesktop"
