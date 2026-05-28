@@ -804,6 +804,15 @@
     };
   };
 
+  services.syncthing = {
+    enable = true;
+    user = "jorlyf";
+    dataDir = "/home/jorlyf/.config/syncthing";
+    configDir = "/home/jorlyf/.config/syncthing";
+    guiAddress = "127.0.0.1:8384";
+    openDefaultPorts = true;
+  };
+
   systemd.user.services.corefonts-to-home = {
     description = "Link fonts to user directory on login";
     wantedBy = [ "graphical-session.target" ];
@@ -844,6 +853,7 @@
         ".config/fish"
         ".config/onlyoffice"
         ".config/obs-studio"
+        ".config/syncthing"
         ".local/share/containers"
         ".local/share/keyrings"
         ".local/share/fish"
