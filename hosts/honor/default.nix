@@ -798,7 +798,10 @@
 
   services.openssh = {
     enable = true;
-    passwordAuthentication = false;
+
+    settings = {
+      PasswordAuthentication = false;
+    };
   };
 
   systemd.user.services.corefonts-to-home = {
