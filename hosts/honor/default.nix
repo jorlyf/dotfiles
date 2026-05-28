@@ -12,6 +12,15 @@
     inputs.impermanence.nixosModules.impermanence
   ];
 
+  nix = {
+    # gc kills ssds
+    gc.automatic = false;
+
+    settings = {
+      extra-experimental-features = ["flakes" "nix-command"];
+    };
+  };
+
   nixpkgs = {
     config = {
       allowUnfree = true;
