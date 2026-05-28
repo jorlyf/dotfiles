@@ -666,6 +666,7 @@
     kdePackages.kate
     telegram-desktop
     zed-editor
+    obs-studio
   ];
 
   services.greetd = {
