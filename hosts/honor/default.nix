@@ -804,15 +804,6 @@
     };
   };
 
-  systemd.user.services.corefonts-to-home = {
-    description = "Link fonts to user directory on login";
-    wantedBy = [ "graphical-session.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/mkdir -p %h/.local/share/fonts && ${pkgs.coreutils}/bin/ln -sfT ${pkgs.corefonts}/share/fonts/truetype %h/.local/share/fonts/corefonts'";
-    }; # chown -h
-  };
-
   time.timeZone = "Europe/Samara";
   system.stateVersion = "26.05";
 
@@ -850,6 +841,7 @@
         ".local/share/onlyoffice"
         ".local/share/TelegramDesktop"
         ".local/share/zed"
+        ".local/share/fonts"
         ".local/state/wireplumber"
         ".local/state/pipewire"
         "persistent"
