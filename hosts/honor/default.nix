@@ -831,6 +831,7 @@
         ".config/mozilla/firefox"
         ".config/fish"
         ".config/onlyoffice"
+        ".config/obs-studio"
         ".local/share/containers"
         ".local/share/keyrings"
         ".local/share/fish"
