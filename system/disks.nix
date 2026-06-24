@@ -57,8 +57,10 @@
       directories = [
         ".ssh"
         ".cache/chromium"
+        ".cache/keepassxc"
         ".config/chromium"
         ".config/fish"
+        ".config/keepassxc"
         ".config/mozilla/firefox"
         ".config/obs-studio"
         ".config/onlyoffice"
