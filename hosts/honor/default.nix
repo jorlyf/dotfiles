@@ -29,7 +29,6 @@
     (flake.outPath + "/user/fish.nix")
     (flake.outPath + "/user/git.nix")
     (flake.outPath + "/user/steam.nix")
-    (flake.outPath + "/user/yazi.nix")
   ];
 
   # нужно для работы камеры, надо подумать, как от этого избавиться
@@ -42,13 +41,13 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    alacritty
     brightnessctl
     chromium
     cliphist
     devenv
     fastfetch
     fuzzel
+    ghostty
     kdePackages.dolphin
     kdePackages.filelight
     kdePackages.kate
