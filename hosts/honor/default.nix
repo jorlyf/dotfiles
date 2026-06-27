@@ -24,6 +24,7 @@
     (flake.outPath + "/system/security.nix")
     (flake.outPath + "/system/users.nix")
     (flake.outPath + "/user/de/default.nix")
+    (flake.outPath + "/user/yazi/default.nix")
     (flake.outPath + "/user/zed/default.nix")
     (flake.outPath + "/user/firefox.nix")
     (flake.outPath + "/user/fish.nix")
@@ -45,9 +46,11 @@
     chromium
     cliphist
     devenv
+    exiftool
     fastfetch
     fuzzel
     ghostty
+    gnused
     kdePackages.dolphin
     kdePackages.filelight
     kdePackages.kate
@@ -64,9 +67,11 @@
     swayidle
     swaylock
     telegram-desktop
+    usbutils
     wl-clipboard
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
+    xdg-desktop-portal-termfilechooser
     xwayland-satellite
     zed-editor
   ];

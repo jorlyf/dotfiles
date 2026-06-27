@@ -4,8 +4,7 @@
 {
   programs.niri = {
     enable = true;
-    # Сделать, когда настрою yazi полностью
-    # useNautilus = false;
+    useNautilus = false;
   };
 
   environment.etc."niri/config.kdl".source = ./config.kdl;
