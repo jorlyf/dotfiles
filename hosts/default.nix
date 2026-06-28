@@ -23,4 +23,5 @@
     };
 in {
   honor = mkHost "honor" "x86_64-linux";
+  pc = mkHost "pc" "x86_64-linux";
 }
