@@ -46,6 +46,7 @@
       "/var/lib/nixos"
       "/var/lib/systemd/backlight"
       "/var/log"
+      "/var/tmp"
     ];
 
     files = [
