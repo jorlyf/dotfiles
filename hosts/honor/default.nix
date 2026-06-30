@@ -1,8 +1,6 @@
 {
-  self,
   config,
   flake,
-  inputs,
   lib,
   modulesPath,
   pkgs,
@@ -32,6 +30,18 @@
     (flake.outPath + "/user/steam.nix")
   ];
 
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "powersave";
+      turbo = "never";
+    };
+  };
+
   # нужно для работы камеры, надо подумать, как от этого избавиться
   users.groups.mvusb_dev = {};
   services.udev.extraRules = ''
@@ -60,7 +70,7 @@
     kdePackages.qtsvg
     keepassxc
     mako
-    obs-studio
+    mpv
     onlyoffice-desktopeditors
     podman-compose
     podman-tui
@@ -75,18 +85,6 @@
     xwayland-satellite
     zed-editor
   ];
-
-  services.auto-cpufreq.enable = true;
-  services.auto-cpufreq.settings = {
-    battery = {
-      governor = "powersave";
-      turbo = "never";
-    };
-    charger = {
-      governor = "powersave";
-      turbo = "never";
-    };
-  };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
