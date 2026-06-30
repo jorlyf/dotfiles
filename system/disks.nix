@@ -69,6 +69,7 @@
         ".local/share/containers"
         ".local/share/fish"
         ".local/share/onlyoffice"
+        ".local/share/Steam"
         ".local/share/TelegramDesktop"
         ".local/share/zed"
         ".local/state/pipewire"
