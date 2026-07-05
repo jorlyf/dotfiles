@@ -5,7 +5,8 @@
   modulesPath,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/hardware/cpu/intel-npu.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -43,7 +44,7 @@
   };
 
   # нужно для работы камеры, надо подумать, как от этого избавиться
-  users.groups.mvusb_dev = {};
+  users.groups.mvusb_dev = { };
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTR{idVendor}=="f622", MODE="666", GROUP="mvusb_dev"
     KERNEL=="*", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="add", ATTR{idVendor}=="f622", MODE="666", TAG+="mvusb_dev"
@@ -71,6 +72,8 @@
     keepassxc
     mako
     mpv
+    nil
+    nixd
     onlyoffice-desktopeditors
     podman-compose
     podman-tui
@@ -88,7 +91,13 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "thunderbolt"
+    "nvme"
+    "usb_storage"
+    "sd_mod"
+  ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
