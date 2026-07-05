@@ -5,7 +5,7 @@
 {
   imports = [
     ./niri
-    ./waybar
+    ./ironbar
   ];
 
   services.greetd = {

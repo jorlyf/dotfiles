@@ -10,15 +10,32 @@
       cat > ${config.users.users.jorlyf.home}/.config/zed/settings.json << EOF
       {
         "auto_install_extensions": {
-          "vscode-dark-polished": true,
-          "material-icon-theme": true,
+          "catppuccin": true,
+          "catppuccin-icons": true,
           "html": true,
           "scss": true,
           "neocmake": true
         },
+        "theme": {
+          "mode": "dark",
+          "light": "Catppuccin Latte",
+          "dark": "Catppuccin Frappé"
+        },
+        "icon_theme": {
+          "mode": "dark",
+          "light": "Catppuccin Latte",
+          "dark": "Catppuccin Frappé"
+        },
+        "ui_font_family": ".SystemUIFont",
+        "ui_font_size": 16.0,
+        "buffer_font_family": ".ZedMono",
+        "buffer_font_size": 16.0,
+        "soft_wrap": "bounded",
+        "preferred_line_length": 120,
+        "base_keymap": "VSCode",
+        "use_podman": true,
         "agent_servers": {},
         "cli_default_open_behavior": "existing_window",
-        "use_podman": true,
         "collaboration_panel": {
           "dock": "left"
         },
@@ -28,8 +45,6 @@
         "outline_panel": {
           "dock": "right"
         },
-        "preferred_line_length": 120,
-        "soft_wrap": "bounded",
         "agent": {
           "flexible": true,
           "default_profile": "ask",
@@ -75,7 +90,6 @@
         },
         "autosave": "off",
         "agent_ui_font_size": 16.0,
-        "buffer_font_family": ".ZedMono",
         "confirm_quit": true,
         "buffer_font_weight": 400.0,
         "auto_update": false,
@@ -96,28 +110,14 @@
             "function": false
           }
         },
-        "ui_font_family": ".SystemUIFont",
         "minimap": {
           "show": "auto"
         },
         "tab_size": 2,
-        "icon_theme": {
-          "mode": "dark",
-          "light": "Zed (Default)",
-          "dark": "Material Icon Theme"
-        },
         "telemetry": {
           "diagnostics": false,
           "metrics": false
         },
-        "base_keymap": "VSCode",
-        "ui_font_size": 16.0,
-        "buffer_font_size": 16.0,
-        "theme": {
-          "mode": "dark",
-          "light": "One Light",
-          "dark": "VSCode Dark Polished"
-        }
       }
       EOF
 

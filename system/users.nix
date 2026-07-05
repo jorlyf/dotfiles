@@ -16,6 +16,7 @@
         uid = 1000;
         initialPassword = "admin";
 
+        homix = true;
         shell = pkgs.fish;
 
         extraGroups = [

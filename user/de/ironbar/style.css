@@ -1,0 +1,54 @@
+:root {
+  --color-base: #303446;
+  --color-mantle: #292c3c;
+  --color-crust: #232634;
+
+  --color-text: #c6d0f5;
+  --color-subtext1: #b5bfe2;
+  --color-subtext0: #a5adce;
+
+  --color-overlay2: #949cbb;
+  --color-overlay1: #838ba7;
+  --color-overlay0: #737994;
+
+  --color-surface2: #626880;
+  --color-surface1: #51576d;
+  --color-surface0: #414559;
+
+  --color-accent: #babbf1;
+
+  --color-red: #e78284;
+
+  --margin-lg: 1em;
+  --margin-sm: 0.5em;
+  --margin-xs: 0.25em;
+
+  --size-md: 16px;
+}
+
+* {
+  font-family: sans-serif;
+  font-size: var(--size-md);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.container {
+  background-color: var(--color-mantle);
+}
+
+.workspaces {
+  background-color: var(--color-crust);
+}
+
+.workspaces .item.focused {
+  background-color: var(--color-base);
+}
+
+.workspaces .item.urgent {
+}
+
+.widget {
+  background-color: green;
+}

@@ -39,7 +39,7 @@ layout {
 
   center-focused-column "never"
 
-  background-color "transparent"
+  background-color "#303446"
 
   preset-column-widths {
     proportion 0.33
@@ -52,8 +52,12 @@ layout {
 
   focus-ring {
     width 1
-    active-color "#c6d0f5"
-    urgent-color "#ff0000"
+    active-color "#ca9ee6"
+    inactive-color "#babbf1"
+    urgent-color "#e78284"
+    active-gradient from="#ca9ee6" to="#babbf1" angle=45
+    inactive-gradient from="#babbf1" to="#626880" angle=45 relative-to="workspace-view"
+    urgent-gradient from="#e5c890" to="#ef9f76" angle=45
   }
 
   border {
@@ -61,7 +65,37 @@ layout {
   }
 
   shadow {
-    off
+    // off
+    softness 30
+    spread 5
+    offset x=0 y=5
+    draw-behind-window true
+    color "#2326344d"
+    inactive-color "#3034464d"
+  }
+
+  tab-indicator {
+    on
+    hide-when-single-tab
+    place-within-column
+    gap 5
+    width 4
+    length total-proportion=1.0
+    position "right"
+    gaps-between-tabs 2
+    corner-radius 8
+    active-color "#ca9ee6"
+    inactive-color "#babbf1"
+    urgent-color "#e78284"
+    active-gradient from="#ca9ee6" to="#babbf1" angle=45
+    inactive-gradient from="#babbf1" to="#626880" angle=45 relative-to="workspace-view"
+    urgent-gradient from="#e5c890" to="#ef9f76" angle=45
+  }
+
+  insert-hint {
+    on
+    color "#ef9f76"
+    gradient from="#ef9f76" to="#babbf1" angle=45 relative-to="workspace-view"
   }
 }
 
