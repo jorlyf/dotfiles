@@ -10,6 +10,7 @@
   imports = [
     (modulesPath + "/hardware/cpu/intel-npu.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
+    (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/system/services/openssh.nix")
     (flake.outPath + "/system/services/syncthing.nix")
     (flake.outPath + "/system/bluetooth.nix")
@@ -28,9 +29,11 @@
     (flake.outPath + "/user/firefox.nix")
     (flake.outPath + "/user/fish.nix")
     (flake.outPath + "/user/git.nix")
+    (flake.outPath + "/user/gtk.nix")
     (flake.outPath + "/user/obs-studio.nix")
     (flake.outPath + "/user/steam.nix")
   ];
+
   boot.loader.limine = {
     extraEntries = ''
       /Windows
