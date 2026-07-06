@@ -10,12 +10,14 @@
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
       ];
+      config = {
+        common = {
+          "default" = [ "gtk" ];
+        };
+      };
     };
     mime = {
       enable = true;
-      defaultApplications = {
-        "inode/directory" = "yazi.desktop";
-      };
     };
   };
 }

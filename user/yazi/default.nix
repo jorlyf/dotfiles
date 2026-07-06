@@ -6,6 +6,10 @@
     ./termfilechooser.nix
   ];
 
+  environment.sessionVariables = {
+    TERMINAL = "ghostty";
+  };
+
   programs.yazi = {
     enable = true;
     plugins = {
@@ -32,6 +36,110 @@
         };
         input = {
           cursor_blink = true;
+        };
+        opener = {
+          edit = [
+            {
+              run = "$EDITOR %s";
+              desc = "$EDITOR";
+              for = "unix";
+              orphan = true;
+            }
+          ];
+          open = [
+            {
+              run = "xdg-open %s1";
+              desc = "Открыть";
+              for = "linux";
+            }
+          ];
+          extract = [
+            {
+              run = "ya pub extract --list %s";
+              desc = "Извлечь сюда";
+            }
+          ];
+          mpv = [
+            {
+              run = "mpv %*";
+              desc = "mpv";
+              orphan = true;
+            }
+            {
+              run = "mpv --vid=no %*";
+              desc = "mpv (только аудио)";
+              orphan = true;
+            }
+          ];
+        };
+        open = {
+          rules = [
+            # Folder
+            {
+              url = "*/";
+              use = [
+                "edit"
+                "open"
+              ];
+            }
+            # HTML file
+            {
+              url = "*.html";
+              use = [
+                "open"
+                "edit"
+              ];
+            }
+            # Text
+            {
+              mime = "text/*";
+              use = [
+                "edit"
+              ];
+            }
+            # Image
+            {
+              mime = "image/*";
+              use = [
+                "open"
+              ];
+            }
+            # Media
+            {
+              mime = "{audio,video}/*";
+              use = [
+                "mpv"
+              ];
+            }
+            # Code
+            {
+              mime = "application/{json,ndjson,javascript,wine-extension-ini}";
+              use = [
+                "edit"
+              ];
+            }
+            # Archive
+            {
+              mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}";
+              use = [
+                "extract"
+              ];
+            }
+            # Empty file
+            {
+              mime = "inode/empty";
+              use = [
+                "edit"
+              ];
+            }
+            # Fallback
+            {
+              url = "*";
+              use = [
+                "open"
+              ];
+            }
+          ];
         };
       };
       keymap = {

@@ -10,7 +10,7 @@
         name = "jorlyf";
       };
       core = {
-        editor = "nano";
+        editor = "zeditor --wait";
       };
       init = {
         defaultBranch = "main";
