@@ -6,11 +6,8 @@
 }:
 {
   xdg.portal = {
-    enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-termfilechooser
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-gtk
     ];
     config = {
       common = {
@@ -44,4 +41,23 @@
   systemd.user.services."xdg-desktop-portal-termfilechooser" = {
     enable = true;
   };
+
+  environment.systemPackages = [
+    (pkgs.yazi.overrideAttrs (oldAttrs: {
+      postInstall = (oldAttrs.postInstall or "") + ''
+        cat <<EOF > $out/share/applications/yazi.desktop
+        [Desktop Entry]
+        Name=Yazi
+        Icon=yazi
+        Comment=Blazing fast terminal file manager written in Rust, based on async I/O
+        Terminal=false
+        Exec=ghostty -e yazi %u
+        Type=Application
+        MimeType=inode/directory
+        Categories=System;FileManager;FileTools;ConsoleOnly
+        Keywords=File;Manager;Explorer;Browser;Launcher;
+        EOF
+      '';
+    }))
+  ];
 }

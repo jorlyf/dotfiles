@@ -32,6 +32,7 @@
     (flake.outPath + "/user/gtk.nix")
     (flake.outPath + "/user/obs-studio.nix")
     (flake.outPath + "/user/steam.nix")
+    (flake.outPath + "/user/xdg.nix")
   ];
 
   boot.loader.limine = {
@@ -73,13 +74,6 @@
     fuzzel
     ghostty
     gnused
-    kdePackages.dolphin
-    kdePackages.filelight
-    kdePackages.kate
-    kdePackages.kio
-    kdePackages.kio-extras
-    kdePackages.kio-fuse
-    kdePackages.qtsvg
     keepassxc
     mako
     mpv
