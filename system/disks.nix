@@ -99,6 +99,10 @@
         "Pictures"
         "Videos"
       ];
+
+      files = [
+        ".mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json"
+      ];
     };
   };
 }
