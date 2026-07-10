@@ -12,27 +12,44 @@
       neededForBoot = true;
       device = "/dev/disk/by-label/NIXBOOT";
       fsType = "vfat";
-      options = [ "umask=0077" "noatime" "discard"];
+      options = [
+        "umask=0077"
+        "noatime"
+        "discard"
+      ];
     };
 
     "/" = {
       device = "none";
       fsType = "tmpfs";
-      options = ["size=2G" "mode=755"];
+      options = [
+        "size=2G"
+        "mode=755"
+      ];
     };
 
     "/nix" = {
       neededForBoot = true;
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
-      options = ["noatime" "discard" "subvol=@nix" "compress=zstd"];
+      options = [
+        "noatime"
+        "discard"
+        "subvol=@nix"
+        "compress=zstd"
+      ];
     };
 
     "/persistent" = {
       neededForBoot = true;
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";
-      options = ["noatime" "discard" "subvol=@persistent" "compress=zstd"];
+      options = [
+        "noatime"
+        "discard"
+        "subvol=@persistent"
+        "compress=zstd"
+      ];
     };
   };
 
@@ -61,6 +78,7 @@
         ".cache/keepassxc"
         ".config/chromium"
         ".config/fish"
+        ".config/kdeconnect"
         ".config/keepassxc"
         ".config/mozilla/firefox"
         ".config/obs-studio"
@@ -68,6 +86,7 @@
         ".config/syncthing"
         ".local/share/containers"
         ".local/share/fish"
+        ".local/share/kdeconnect"
         ".local/share/onlyoffice"
         ".local/share/Steam"
         ".local/share/TelegramDesktop"
@@ -75,7 +94,10 @@
         ".local/state/pipewire"
         ".local/state/wireplumber"
         "persistent"
-        "Documents" "Downloads" "Pictures" "Videos"
+        "Documents"
+        "Downloads"
+        "Pictures"
+        "Videos"
       ];
     };
   };
