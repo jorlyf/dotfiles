@@ -32,6 +32,7 @@
     (flake.outPath + "/user/git.nix")
     (flake.outPath + "/user/gtk.nix")
     (flake.outPath + "/user/kdeconnect.nix")
+    (flake.outPath + "/user/mpv.nix")
     (flake.outPath + "/user/obs-studio.nix")
     (flake.outPath + "/user/steam.nix")
     (flake.outPath + "/user/xdg.nix")
@@ -78,7 +79,6 @@
     gnused
     keepassxc
     mako
-    mpv
     nil
     nixd
     onlyoffice-desktopeditors
