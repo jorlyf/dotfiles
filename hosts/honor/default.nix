@@ -25,6 +25,7 @@
     (flake.outPath + "/system/security.nix")
     (flake.outPath + "/system/users.nix")
     (flake.outPath + "/user/de/default.nix")
+    (flake.outPath + "/user/mako/default.nix")
     (flake.outPath + "/user/yazi/default.nix")
     (flake.outPath + "/user/zed/default.nix")
     (flake.outPath + "/user/firefox.nix")
@@ -35,6 +36,7 @@
     (flake.outPath + "/user/mpv.nix")
     (flake.outPath + "/user/obs-studio.nix")
     (flake.outPath + "/user/steam.nix")
+    (flake.outPath + "/user/telegram.nix")
     (flake.outPath + "/user/xdg.nix")
   ];
 
@@ -72,7 +74,6 @@
     ghostty
     gnused
     keepassxc
-    mako
     nil
     nixd
     onlyoffice-desktopeditors
@@ -81,7 +82,6 @@
     qbittorrent
     swayidle
     swaylock
-    telegram-desktop
     usbutils
     wl-clipboard
     xdg-desktop-portal-gnome

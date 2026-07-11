@@ -1,0 +1,24 @@
+layer=overlay
+
+anchor=top-right
+
+margin=8
+padding=8
+
+border-size=1
+border-radius=4
+
+icons=1
+
+default-timeout=5000
+
+[urgency=critical]
+default-timeout=0
+
+background-color=#303446
+text-color=#c6d0f5
+border-color=#babbf1
+progress-color=over #414559
+
+[urgency=high]
+border-color=#ef9f76
