@@ -69,4 +69,18 @@
     "diagnostics": false,
     "metrics": false,
   },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
+        "hover": {
+          "memoryLayout": {
+            "enable": true,
+          },
+        },
+      },
+    },
+  },
 }
