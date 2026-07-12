@@ -4,8 +4,8 @@
 }:
 {
   imports = [
+    ./ashell
     ./niri
-    ./ironbar
   ];
 
   services.greetd = {
@@ -17,6 +17,4 @@
       };
     };
   };
-
-  programs.nm-applet.enable = true;
 }

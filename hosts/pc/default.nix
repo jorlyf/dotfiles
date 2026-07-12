@@ -27,7 +27,6 @@
     (flake.outPath + "/user/de/default.nix")
     (flake.outPath + "/user/fuzzel/default.nix")
     (flake.outPath + "/user/ghostty/default.nix")
-    (flake.outPath + "/user/mako/default.nix")
     (flake.outPath + "/user/yazi/default.nix")
     (flake.outPath + "/user/zed/default.nix")
     (flake.outPath + "/user/firefox.nix")
@@ -80,6 +79,7 @@
     fastfetch
     gnused
     keepassxc
+    libnotify
     nil
     nixd
     onlyoffice-desktopeditors

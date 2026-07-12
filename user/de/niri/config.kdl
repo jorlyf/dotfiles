@@ -1,8 +1,8 @@
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 
-// Block out mako notifications from screencasts.
+// Block out ashell toast notifications from screencasts.
 layer-rule {
-  match namespace="^notifications$"
+  match namespace="^ashell-toast-layer$"
   block-out-from "screencast"
 }
 
@@ -36,6 +36,10 @@ input {
 
 layout {
   gaps 16
+
+  struts {
+    bottom -8
+  }
 
   center-focused-column "never"
 

@@ -1,0 +1,64 @@
+language = "ru-RU"
+region = "ru-RU"
+position = "Bottom"
+layer = "Bottom"
+enable_esc_key = true
+
+[modules]
+left = [ "Workspaces" ]
+right = [ "SystemInfo", "KeyboardLayout", "MediaPlayer", "Tray", [ "Tempo", "Privacy", "Settings", "Notifications" ] ]
+
+[keyboard_layout.labels]
+"English (US)" = "en"
+"Russian" = "ru"
+
+[system_info]
+indicators = [ "DownloadSpeed", "UploadSpeed" ]
+interval = 5
+
+[system_info.memory]
+format = "Fraction"
+
+[system_info.disk]
+mounts = ["/persistent"]
+format = "Fraction"
+
+[tempo]
+clock_format = "%a %d %b %R"
+formats = [ "%d.%m.%Y %H:%M:%S" ]
+weather_indicator = "None"
+
+[settings]
+indicators = ["IdleInhibitor", "Brightness", "Audio", "Microphone", "Bluetooth", "Network", "Vpn", "Battery"]
+audio_indicator_format = "IconAndPercentage"
+microphone_indicator_format = "IconAndPercentage"
+brightness_indicator_format = "IconAndPercentage"
+
+[notifications]
+format = "%d.%m %H:%M:%S"
+show_timestamps = true
+show_bodies = true
+grouped = true
+toast = true
+toast_position = "top_right"
+toast_timeout = 4000
+toast_limit = 5
+toast_max_height = 150
+
+[appearance]
+style = "Solid"
+scale_factor = 1.2
+success_color = "#a6d189"
+warning_color = "#e5c890"
+danger_color = "#e78284"
+text_color = "#c6d0f5"
+workspace_colors = [ "#babbf1", "#8caaee", "#f4b8e4" ]
+
+[appearance.primary_color]
+base = "#babbf1"
+text = "#303446"
+
+[appearance.background_color]
+base = "#303446"
+weak = "#414559"
+strong = "#51576d"
