@@ -26,6 +26,7 @@
     (flake.outPath + "/system/users.nix")
     (flake.outPath + "/user/de/default.nix")
     (flake.outPath + "/user/fuzzel/default.nix")
+    (flake.outPath + "/user/ghostty/default.nix")
     (flake.outPath + "/user/mako/default.nix")
     (flake.outPath + "/user/yazi/default.nix")
     (flake.outPath + "/user/zed/default.nix")
@@ -77,7 +78,6 @@
     devenv
     exiftool
     fastfetch
-    ghostty
     gnused
     keepassxc
     nil
