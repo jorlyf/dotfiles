@@ -47,10 +47,12 @@
       battery = {
         governor = "powersave";
         turbo = "never";
+        energy_performance_preference = "power";
       };
       charger = {
-        governor = "powersave";
-        turbo = "never";
+        governor = "performance";
+        turbo = "auto";
+        energy_performance_preference = "balance_performance";
       };
     };
   };
