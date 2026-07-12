@@ -13,6 +13,7 @@
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/system/services/openssh.nix")
     (flake.outPath + "/system/services/syncthing.nix")
+    (flake.outPath + "/system/services/upower.nix")
     (flake.outPath + "/system/bluetooth.nix")
     (flake.outPath + "/system/boot.nix")
     (flake.outPath + "/system/common.nix")
