@@ -85,6 +85,8 @@
         ".config/onlyoffice"
         ".config/syncthing"
         ".local/share/containers"
+        ".local/share/devenv"
+        ".local/share/direnv"
         ".local/share/fish"
         ".local/share/kdeconnect"
         ".local/share/onlyoffice"
