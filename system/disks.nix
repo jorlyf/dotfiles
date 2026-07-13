@@ -74,8 +74,7 @@
     users.jorlyf = {
       directories = [
         ".ssh"
-        ".cache/chromium"
-        ".cache/keepassxc"
+        ".cache"
         ".config/chromium"
         ".config/fish"
         ".config/kdeconnect"
