@@ -17,6 +17,7 @@
     (flake.outPath + "/system/bluetooth.nix")
     (flake.outPath + "/system/boot.nix")
     (flake.outPath + "/system/common.nix")
+    (flake.outPath + "/system/direnv.nix")
     (flake.outPath + "/system/disks.nix")
     (flake.outPath + "/system/fonts.nix")
     (flake.outPath + "/system/networking.nix")
