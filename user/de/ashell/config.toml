@@ -6,7 +6,8 @@ enable_esc_key = true
 
 [modules]
 left = [ "Workspaces" ]
-right = [ "SystemInfo", "KeyboardLayout", "MediaPlayer", "Tray", [ "Tempo", "Privacy", "Settings", "Notifications" ] ]
+center = [ "MediaPlayer" ]
+right = [ "SystemInfo", "KeyboardLayout", "Tray", [ "Tempo", "Privacy", "Settings", "Notifications" ] ]
 
 [keyboard_layout.labels]
 "English (US)" = "en"
