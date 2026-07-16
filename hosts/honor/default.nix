@@ -10,6 +10,7 @@
   imports = [
     (modulesPath + "/hardware/cpu/intel-npu.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
+    (flake.outPath + "/modules/gaming")
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/system/services/openssh.nix")
     (flake.outPath + "/system/services/syncthing.nix")
@@ -37,7 +38,6 @@
     (flake.outPath + "/user/kdeconnect.nix")
     (flake.outPath + "/user/mpv.nix")
     (flake.outPath + "/user/obs-studio.nix")
-    (flake.outPath + "/user/steam.nix")
     (flake.outPath + "/user/telegram.nix")
     (flake.outPath + "/user/xdg.nix")
   ];

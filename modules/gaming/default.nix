@@ -9,4 +9,9 @@
       extraArgs = "-system-composer";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    mangohud
+    gamemode
+  ];
 }
