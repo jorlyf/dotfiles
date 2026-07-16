@@ -1,15 +1,40 @@
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 
-// Block out ashell toast notifications from screencasts.
+// Черное окно уведомлений ashell при записи экрана.
 layer-rule {
   match namespace="^ashell-toast-layer$"
   block-out-from "screencast"
 }
 
-// Block out password managers from screencasts.
+// Черное окно KeePassXC при записи экрана.
 window-rule {
-  match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+  match app-id="^org\\.keepassxc\\.KeePassXC$"
   block-out-from "screencast"
+}
+
+// Открывать Firefox на весь экран.
+window-rule {
+  match app-id="^firefox$"
+  open-maximized true
+}
+
+// Открывать Picture-in-Picture окно Firefox в плавающем режиме.
+window-rule {
+  match app-id="^firefox$" title="^Picture-in-Picture$"
+  open-floating true
+}
+
+// Открывать Zed на весь экран.
+window-rule {
+  match app-id="^dev.zed.Zed$"
+  open-maximized true
+}
+
+cursor {
+  xcursor-theme "breeze_cursors"
+  xcursor-size 48
+
+  hide-after-inactive-ms 2500
 }
 
 input {
@@ -38,6 +63,7 @@ layout {
   gaps 16
 
   struts {
+    // Для ashell
     bottom -8
   }
 
@@ -56,12 +82,9 @@ layout {
 
   focus-ring {
     width 1
-    active-color "#ca9ee6"
-    inactive-color "#babbf1"
+    active-color "#babbf1"
+    inactive-color "#626880"
     urgent-color "#e78284"
-    active-gradient from="#ca9ee6" to="#babbf1" angle=45
-    inactive-gradient from="#babbf1" to="#626880" angle=45 relative-to="workspace-view"
-    urgent-gradient from="#e5c890" to="#ef9f76" angle=45
   }
 
   border {
@@ -69,37 +92,16 @@ layout {
   }
 
   shadow {
-    // off
-    softness 30
-    spread 5
-    offset x=0 y=5
-    draw-behind-window true
-    color "#2326344d"
-    inactive-color "#3034464d"
+    off
   }
 
   tab-indicator {
-    on
-    hide-when-single-tab
-    place-within-column
-    gap 5
-    width 4
-    length total-proportion=1.0
-    position "right"
-    gaps-between-tabs 2
-    corner-radius 8
-    active-color "#ca9ee6"
-    inactive-color "#babbf1"
-    urgent-color "#e78284"
-    active-gradient from="#ca9ee6" to="#babbf1" angle=45
-    inactive-gradient from="#babbf1" to="#626880" angle=45 relative-to="workspace-view"
-    urgent-gradient from="#e5c890" to="#ef9f76" angle=45
+    off
   }
 
   insert-hint {
     on
-    color "#ef9f76"
-    gradient from="#ef9f76" to="#babbf1" angle=45 relative-to="workspace-view"
+    color "#babbf1"
   }
 }
 
@@ -113,6 +115,7 @@ hotkey-overlay {
   skip-at-startup
 }
 
+// Не сохранять скриншоты на диск.
 screenshot-path null
 
 overview {
@@ -126,22 +129,13 @@ animations {
 binds {
   Mod+Shift+Slash { show-hotkey-overlay; }
 
-  Mod+E     hotkey-overlay-title="Open a file manager: yazi"  { spawn "ghostty" "-e" "yazi"; }
-  Mod+T     hotkey-overlay-title="Open a Terminal: ghostty"   { spawn "ghostty"; }
-  Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-  Mod+L     hotkey-overlay-title="Lock the Screen: swaylock"  { spawn "swaylock"; }
+  Mod+E     hotkey-overlay-title="Открыть файловый менеджер yazi" { spawn "ghostty" "-e" "yazi"; }
+  Mod+T     hotkey-overlay-title="Открыть терминал"               { spawn "ghostty"; }
+  Mod+Space hotkey-overlay-title="Открыть менеджер приложений"    { spawn "fuzzel"; }
+  Mod+L     hotkey-overlay-title="Заблокировать экран"            { spawn "swaylock"; }
+  Mod+P     hotkey-overlay-title="Отключить мониторы"             { power-off-monitors; }
 
-  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
-  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-  XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-  XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-  XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-  XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-  XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
-
-  XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+  Mod+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
 
   Mod+O repeat=false { toggle-overview; }
 
@@ -176,9 +170,12 @@ binds {
   Mod+Shift+8 { move-column-to-workspace 8; }
   Mod+Shift+9 { move-column-to-workspace 9; }
 
-  Mod+R { switch-preset-column-width; }
-  Mod+F { maximize-column; }
-  Mod+Shift+F { fullscreen-window; }
+  Mod+R       { switch-preset-column-width; }
+  Mod+Shift+R { switch-preset-column-width-back; }
+
+  Mod+F       { maximize-column; }
+  Mod+Shift+F { maximize-window-to-edges; }
+  Mod+Alt+F   { fullscreen-window; }
 
   Mod+C { center-column; }
 
@@ -189,5 +186,15 @@ binds {
   Mod+Ctrl+F12 { screenshot-screen show-pointer=false; }
   Mod+Alt+F12  { screenshot-window show-pointer=false; }
 
-  Mod+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
+  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+  XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+  XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+  XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+  XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 }

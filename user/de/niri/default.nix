@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -24,5 +25,10 @@
 
       ${builtins.readFile ./config.kdl}
     '';
+
+    environment.systemPackages = with pkgs; [
+      playerctl
+    ];
+    services.playerctld.enable = true;
   };
 }
