@@ -27,6 +27,7 @@
     '';
 
     environment.systemPackages = with pkgs; [
+      catppuccin-cursors.frappeLavender
       playerctl
     ];
     services.playerctld.enable = true;
