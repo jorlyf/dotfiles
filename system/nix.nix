@@ -7,7 +7,14 @@
     gc.automatic = false;
 
     settings = {
-      extra-experimental-features = ["flakes" "nix-command"];
+      extra-experimental-features = [
+        "flakes"
+        "nix-command"
+      ];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
     };
   };
 
