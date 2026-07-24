@@ -37,6 +37,8 @@ cursor {
   hide-after-inactive-ms 2500
 }
 
+prefer-no-csd
+
 input {
   keyboard {
     xkb {
