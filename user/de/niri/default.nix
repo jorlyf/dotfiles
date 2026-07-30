@@ -30,6 +30,5 @@
       catppuccin-cursors.frappeLavender
       playerctl
     ];
-    services.playerctld.enable = true;
   };
 }
