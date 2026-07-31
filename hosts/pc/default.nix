@@ -12,6 +12,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     (flake.outPath + "/modules/gaming")
     (flake.outPath + "/modules/homix.nix")
+    (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system/services/openssh.nix")
     (flake.outPath + "/system/services/syncthing.nix")
     (flake.outPath + "/system/services/upower.nix")

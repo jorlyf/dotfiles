@@ -1,6 +1,7 @@
 {
   self,
   nixpkgs,
+
   ...
 }: let
   inherit (self) inputs;
@@ -12,9 +13,9 @@
             networking.hostName = name;
             nixpkgs.hostPlatform = system;
           }
+          inputs.zapret-discord-youtube.nixosModules.withTestTools
           ./${name}
         ];
-        # ++ builtins.attrValues self.nixosModules;
 
       specialArgs = {
         inherit inputs;
