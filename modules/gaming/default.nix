@@ -11,7 +11,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    mangohud
+    discord
     gamemode
+    mangohud
   ];
 }

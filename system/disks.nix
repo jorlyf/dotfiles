@@ -76,6 +76,7 @@
         ".ssh"
         ".cache"
         ".config/chromium"
+        ".config/discord"
         ".config/fish"
         ".config/kdeconnect"
         ".config/keepassxc"
