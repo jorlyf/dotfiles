@@ -1,1 +1,2 @@
 theme = catppuccin-frappe-lavender.conf
+shell-integration-features = ssh-env,ssh-terminfo
