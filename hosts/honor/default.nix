@@ -43,6 +43,8 @@
     (flake.outPath + "/user/xdg.nix")
   ];
 
+  programs.amnezia-vpn.enable = true;
+
   services.auto-cpufreq = {
     enable = true;
     settings = {
