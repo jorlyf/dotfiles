@@ -1,7 +1,12 @@
 {
+  pkgs,
   ...
 }:
 {
+  environment.systemPackages = [
+    pkgs.zed-editor
+  ];
+
   environment.sessionVariables = {
     EDITOR = "zeditor --wait";
   };

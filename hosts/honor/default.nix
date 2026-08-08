@@ -10,12 +10,13 @@
   imports = [
     (modulesPath + "/hardware/cpu/intel-npu.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
+    (flake.outPath + "/modules/desktop/niri")
+    (flake.outPath + "/modules/desktop/programs")
+    (flake.outPath + "/modules/desktop/services")
     (flake.outPath + "/modules/gaming")
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system/services/openssh.nix")
-    (flake.outPath + "/system/services/syncthing.nix")
-    (flake.outPath + "/system/services/upower.nix")
     (flake.outPath + "/system/bluetooth.nix")
     (flake.outPath + "/system/boot.nix")
     (flake.outPath + "/system/common.nix")
@@ -24,23 +25,8 @@
     (flake.outPath + "/system/fonts.nix")
     (flake.outPath + "/system/networking.nix")
     (flake.outPath + "/system/nix.nix")
-    (flake.outPath + "/system/podman.nix")
     (flake.outPath + "/system/security.nix")
     (flake.outPath + "/system/users.nix")
-    (flake.outPath + "/user/de/default.nix")
-    (flake.outPath + "/user/fuzzel/default.nix")
-    (flake.outPath + "/user/ghostty/default.nix")
-    (flake.outPath + "/user/yazi/default.nix")
-    (flake.outPath + "/user/zed/default.nix")
-    (flake.outPath + "/user/firefox.nix")
-    (flake.outPath + "/user/fish.nix")
-    (flake.outPath + "/user/git.nix")
-    (flake.outPath + "/user/gtk.nix")
-    (flake.outPath + "/user/kdeconnect.nix")
-    (flake.outPath + "/user/mpv.nix")
-    (flake.outPath + "/user/obs-studio.nix")
-    (flake.outPath + "/user/telegram.nix")
-    (flake.outPath + "/user/xdg.nix")
   ];
 
   programs.amnezia-vpn.enable = true;
@@ -71,30 +57,19 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    brightnessctl
-    chromium
-    cliphist
     devenv
     exiftool
     fastfetch
     gnused
     keepassxc
-    libnotify
     nil
     nixd
     onlyoffice-desktopeditors
     podman-compose
     podman-tui
     qbittorrent
-    swayidle
-    swaylock
     usbutils
-    wl-clipboard
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
     xdg-desktop-portal-termfilechooser
-    xwayland-satellite
-    zed-editor
   ];
 
   environment.sessionVariables = {

@@ -3,8 +3,8 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    ashell
+  environment.systemPackages = [
+    pkgs.ashell
   ];
 
   systemd.user.services.ashell = {
@@ -25,5 +25,9 @@
 
   homix = {
     ".config/ashell/config.toml".source = ./config.toml;
+  };
+
+  services.upower = {
+    enable = true;
   };
 }

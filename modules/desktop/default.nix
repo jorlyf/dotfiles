@@ -1,0 +1,10 @@
+{
+  ...
+}:
+{
+  imports = [
+    ./niri
+    ./programs
+    ./services
+  ];
+}

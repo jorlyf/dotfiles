@@ -3,8 +3,8 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    fuzzel
+  environment.systemPackages = [
+    pkgs.fuzzel
   ];
 
   homix = {
