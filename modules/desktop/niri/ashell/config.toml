@@ -34,6 +34,9 @@ indicators = ["IdleInhibitor", "Brightness", "Audio", "Microphone", "Bluetooth",
 audio_indicator_format = "IconAndPercentage"
 microphone_indicator_format = "IconAndPercentage"
 brightness_indicator_format = "IconAndPercentage"
+shutdown_cmd = "systemctl poweroff"
+reboot_cmd = "systemctl reboot"
+suspend_cmd = "systemctl suspend"
 
 [notifications]
 format = "%d.%m %H:%M:%S"

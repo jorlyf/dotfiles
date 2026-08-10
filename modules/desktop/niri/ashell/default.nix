@@ -21,6 +21,12 @@
       Restart = "on-failure";
       RestartSec = 3;
     };
+
+    path = [
+      "/run/current-system/sw"
+      pkgs.bash
+      pkgs.coreutils
+    ];
   };
 
   homix = {
