@@ -10,6 +10,7 @@
     inputs.catppuccin.nixosModules.catppuccin
     ./ashell
     ./fuzzel
+    ./mako
   ];
 
   options = {

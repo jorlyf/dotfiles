@@ -7,11 +7,11 @@ enable_esc_key = true
 [modules]
 left = [ "Workspaces" ]
 center = [ "MediaPlayer" ]
-right = [ "SystemInfo", "KeyboardLayout", "Tray", [ "Tempo", "Privacy", "Settings", "Notifications" ] ]
+right = [ "SystemInfo", "KeyboardLayout", "Tray", [ "Tempo", "Privacy", "Settings" ] ]
 
 [keyboard_layout.labels]
-"English (US)" = "en"
-"Russian" = "ru"
+"English (US)" = "EN"
+"Russian" = "RU"
 
 [system_info]
 indicators = [ "DownloadSpeed", "UploadSpeed" ]
@@ -37,17 +37,6 @@ brightness_indicator_format = "IconAndPercentage"
 shutdown_cmd = "systemctl poweroff"
 reboot_cmd = "systemctl reboot"
 suspend_cmd = "systemctl suspend"
-
-[notifications]
-format = "%d.%m %H:%M:%S"
-show_timestamps = true
-show_bodies = true
-grouped = true
-toast = true
-toast_position = "bottom_right"
-toast_timeout = 4000
-toast_limit = 5
-toast_max_height = 150
 
 [appearance]
 style = "Solid"

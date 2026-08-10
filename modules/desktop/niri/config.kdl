@@ -1,8 +1,8 @@
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 
-// Черное окно уведомлений ashell при записи экрана.
+// Черное окно уведомлений mako при записи экрана.
 layer-rule {
-  match namespace="^ashell-toast-layer$"
+  match namespace="^notifications$"
   block-out-from "screencast"
 }
 
