@@ -16,17 +16,7 @@
     (flake.outPath + "/modules/gaming")
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/modules/zapret.nix")
-    (flake.outPath + "/system/services/openssh.nix")
-    (flake.outPath + "/system/bluetooth.nix")
-    (flake.outPath + "/system/boot.nix")
-    (flake.outPath + "/system/common.nix")
-    (flake.outPath + "/system/direnv.nix")
-    (flake.outPath + "/system/disks.nix")
-    (flake.outPath + "/system/fonts.nix")
-    (flake.outPath + "/system/networking.nix")
-    (flake.outPath + "/system/nix.nix")
-    (flake.outPath + "/system/security.nix")
-    (flake.outPath + "/system/users.nix")
+    (flake.outPath + "/system")
   ];
 
   programs.amnezia-vpn.enable = true;
