@@ -6,6 +6,7 @@
     ./ghostty
     ./yazi
     ./zed
+    ./firefox.nix
     ./fish.nix
     ./git.nix
     ./kdeconnect.nix
