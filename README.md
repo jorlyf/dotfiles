@@ -29,7 +29,7 @@ sudo sgdisk --zap-all $DISK
 
 2. Создать EFI-раздел (1 ГБ):
 ```
-sudo sgdisk -n 1:0+1G -t 1:EF00 $DISK
+sudo sgdisk -n 1:0:+1G -t 1:EF00 $DISK
 ```
 
 3. Создать системный раздел:
