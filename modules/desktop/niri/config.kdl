@@ -131,8 +131,8 @@ animations {
 binds {
   Mod+Shift+Slash { show-hotkey-overlay; }
 
-  Mod+E     hotkey-overlay-title="Открыть файловый менеджер yazi" { spawn "ghostty" "-e" "yazi"; }
-  Mod+T     hotkey-overlay-title="Открыть терминал"               { spawn "ghostty"; }
+  Mod+E     hotkey-overlay-title="Открыть файловый менеджер yazi" { spawn "alacritty" "-e" "yazi"; }
+  Mod+T     hotkey-overlay-title="Открыть терминал"               { spawn "alacritty"; }
   Mod+Space hotkey-overlay-title="Открыть менеджер приложений"    { spawn "fuzzel"; }
   Mod+L     hotkey-overlay-title="Заблокировать экран"            { spawn "swaylock"; }
   Mod+P     hotkey-overlay-title="Отключить мониторы"             { power-off-monitors; }

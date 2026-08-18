@@ -3,7 +3,7 @@
 }:
 {
   imports = [
-    ./ghostty
+    ./alacritty
     ./yazi
     ./zed
     ./firefox.nix

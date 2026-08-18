@@ -22,7 +22,7 @@
     ".config/xdg-desktop-portal-termfilechooser/config".text = ''
       [filechooser]
       cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
-      env=TERMCMD='ghostty --title="filechooser" -e'
+      env=TERMCMD='alacritty --title="filechooser" -e'
       env=PATH="$PATH:/run/current-system/sw/bin"
       default_dir=$HOME
       open_mode = suggested

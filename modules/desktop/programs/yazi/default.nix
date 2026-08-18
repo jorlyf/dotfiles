@@ -7,7 +7,7 @@
   ];
 
   environment.sessionVariables = {
-    TERMINAL = "ghostty";
+    TERMINAL = "alacritty";
   };
 
   programs.yazi = {
