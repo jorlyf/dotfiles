@@ -28,8 +28,16 @@
   };
 
   niri-config-append-lines = ''
+    output "ViewSonic Corporation VX24G26J-4K YPU262800439" {
+      mode "3840x2160"
+      focus-at-startup
+      position x=0 y=0
+    }
+
     output "PNP(SAC) G5c II 0000000000000" {
       mode "2560x1440"
+      scale 1.15
+      position x=2194 y=0
     }
   '';
 
