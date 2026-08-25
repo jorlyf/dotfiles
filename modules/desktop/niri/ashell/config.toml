@@ -9,6 +9,10 @@ left = [ "Workspaces" ]
 center = [ "MediaPlayer" ]
 right = [ "SystemInfo", "KeyboardLayout", "Tray", [ "Tempo", "Privacy", "Settings" ] ]
 
+[workspaces]
+visibility_mode = "MonitorSpecific"
+group_by_monitor = true
+
 [keyboard_layout.labels]
 "English (US)" = "EN"
 "Russian" = "RU"
