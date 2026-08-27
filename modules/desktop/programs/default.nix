@@ -12,6 +12,7 @@
     ./kdeconnect.nix
     ./mpv.nix
     ./obs-studio.nix
+    ./swayimg.nix
     ./telegram.nix
   ];
 }
