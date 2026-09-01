@@ -45,8 +45,6 @@
     minecraft.enable = true;
   };
 
-  programs.amnezia-vpn.enable = true;
-
   programs.obs-studio = {
     package = pkgs.obs-studio.override {
       cudaSupport = true;

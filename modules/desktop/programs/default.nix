@@ -6,6 +6,7 @@
     ./alacritty
     ./yazi
     ./zed
+    ./amnezia-vpn.nix
     ./firefox.nix
     ./fish.nix
     ./git.nix
