@@ -19,6 +19,13 @@
     (flake.outPath + "/system")
   ];
 
+  niri-config-append-lines = ''
+    output "Tianma Microelectronics Ltd. TL160MDMP01 Unknown" {
+      mode "3072x1920"
+      variable-refresh-rate
+    }
+  '';
+
   services.auto-cpufreq = {
     enable = true;
     settings = {
