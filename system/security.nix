@@ -1,4 +1,5 @@
 {
+  inputs,
   lib,
   pkgs,
   ...
@@ -16,4 +17,8 @@
 
   environment.etc."xdg/autostart/org.keepassxc.KeePassXC.desktop".source =
     "${pkgs.keepassxc}/share/applications/org.keepassxc.KeePassXC.desktop";
+
+  environment.systemPackages = [
+    inputs.agenix.packages.${pkgs.system}.default
+  ];
 }

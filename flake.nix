@@ -10,6 +10,10 @@
       url = "github:Diegiwg/PrismLauncher-Cracked";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -19,6 +23,7 @@
       catppuccin,
       zapret-discord-youtube,
       prismlauncher-cracked,
+      agenix,
       ...
     }:
     {

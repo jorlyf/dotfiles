@@ -17,6 +17,7 @@
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system")
+    ./syncthing.nix
   ];
 
   niri-config-append-lines = ''

@@ -82,7 +82,6 @@
         ".config/mozilla/firefox"
         ".config/obs-studio"
         ".config/onlyoffice"
-        ".config/syncthing"
         ".local/share/containers"
         ".local/share/devenv"
         ".local/share/direnv"

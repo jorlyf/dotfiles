@@ -24,12 +24,9 @@
     };
   };
 
-  programs.nh = {
-    enable = true;
-    clean = {
-      enable = true;
-      dates = "weekly";
-      extraArgs = "--keep 5";
-    };
+  # WE DONT WANT TO BUILD STUFF ON TMPFS
+  # ITS NOT A GOOD IDEA
+  systemd.services.nix-daemon = {
+    environment.TMPDIR = "/var/tmp";
   };
 }
