@@ -15,5 +15,6 @@
     ./obs-studio.nix
     ./swayimg.nix
     ./telegram.nix
+    ./typst.nix
   ];
 }
