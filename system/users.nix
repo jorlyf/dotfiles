@@ -1,20 +1,27 @@
 {
+  config,
   pkgs,
   ...
 }:
 {
+  age.secrets = {
+    "user-password" = {
+      file = ../secrets/user-password.age;
+    };
+  };
+
   users = {
     mutableUsers = false;
 
     users = {
       root = {
-        initialPassword = "admin";
+        hashedPasswordFile = config.age.secrets."user-password".path;
       };
 
       jorlyf = {
         isNormalUser = true;
         uid = 1000;
-        initialPassword = "admin";
+        hashedPasswordFile = config.age.secrets."user-password".path;
 
         homix = true;
         shell = pkgs.fish;

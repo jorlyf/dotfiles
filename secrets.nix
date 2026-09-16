@@ -5,19 +5,26 @@ let
   pc-system-ed25519 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMzaUzfy5FEdXGhM8eOXDtozZ+ptyi7l5869vW8OyVkJ root@pc";
 in
 {
-  "hosts/honor/secrets/syncthing/cert.age".publicKeys = [ jorlyf-rsa honor-system-ed25519 ];
-  "hosts/honor/secrets/syncthing/key.age".publicKeys = [ jorlyf-rsa honor-system-ed25519 ];
-  "hosts/honor/secrets/user-password.age".publicKeys = [ jorlyf-rsa honor-system-ed25519 ];
+  "secrets/user-password.age".publicKeys = [
+    jorlyf-rsa
+    honor-system-ed25519
+    pc-system-ed25519
+  ];
+
+  "hosts/honor/secrets/syncthing/cert.age".publicKeys = [
+    jorlyf-rsa
+    honor-system-ed25519
+  ];
+  "hosts/honor/secrets/syncthing/key.age".publicKeys = [
+    jorlyf-rsa
+    honor-system-ed25519
+  ];
 
   "hosts/pc/secrets/syncthing/cert.age".publicKeys = [
     jorlyf-rsa
     pc-system-ed25519
   ];
   "hosts/pc/secrets/syncthing/key.age".publicKeys = [
-    jorlyf-rsa
-    pc-system-ed25519
-  ];
-  "hosts/pc/secrets/user-password.age".publicKeys = [
     jorlyf-rsa
     pc-system-ed25519
   ];
