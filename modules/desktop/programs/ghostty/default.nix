@@ -3,8 +3,8 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    ghostty
+  environment.systemPackages = [
+    pkgs.ghostty
   ];
 
   homix = {

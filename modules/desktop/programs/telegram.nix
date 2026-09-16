@@ -3,8 +3,8 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    telegram-desktop
+  environment.systemPackages = [
+    pkgs.telegram-desktop
   ];
 
   environment.etc."xdg/autostart/Telegram.desktop".text = ''

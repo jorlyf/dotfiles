@@ -52,20 +52,20 @@
     KERNEL=="*", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="remove", TAG-="mvusb_dev"
   '';
 
-  environment.systemPackages = with pkgs; [
-    devenv
-    exiftool
-    fastfetch
-    gnused
-    keepassxc
-    nil
-    nixd
-    onlyoffice-desktopeditors
-    podman-compose
-    podman-tui
-    qbittorrent
-    usbutils
-    xdg-desktop-portal-termfilechooser
+  environment.systemPackages = [
+    pkgs.devenv
+    pkgs.exiftool
+    pkgs.fastfetch
+    pkgs.gnused
+    pkgs.keepassxc
+    pkgs.nil
+    pkgs.nixd
+    pkgs.onlyoffice-desktopeditors
+    pkgs.podman-compose
+    pkgs.podman-tui
+    pkgs.qbittorrent
+    pkgs.usbutils
+    pkgs.xdg-desktop-portal-termfilechooser
   ];
 
   environment.sessionVariables = {
@@ -74,9 +74,9 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      vpl-gpu-rt
+    extraPackages = [
+      pkgs.intel-media-driver
+      pkgs.vpl-gpu-rt
     ];
   };
   services.xserver.videoDrivers = [ "modesetting" ];

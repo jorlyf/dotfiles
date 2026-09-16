@@ -6,19 +6,19 @@
   fonts = {
     enableDefaultPackages = true;
 
-    packages = with pkgs; [
-      corefonts
-      fira-code
-      fira-code-symbols
-      font-awesome
-      liberation_ttf
-      nerd-fonts.fira-code
-      nerd-fonts.iosevka
-      nerd-fonts.symbols-only
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-      vista-fonts
+    packages = [
+      pkgs.corefonts
+      pkgs.fira-code
+      pkgs.fira-code-symbols
+      pkgs.font-awesome
+      pkgs.liberation_ttf
+      pkgs.nerd-fonts.fira-code
+      pkgs.nerd-fonts.iosevka
+      pkgs.nerd-fonts.symbols-only
+      pkgs.noto-fonts
+      pkgs.noto-fonts-cjk-sans
+      pkgs.noto-fonts-color-emoji
+      pkgs.vista-fonts
     ];
   };
 

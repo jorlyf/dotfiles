@@ -3,8 +3,8 @@
   ...
 }:
 {
-  environment.systemPackages = with pkgs; [
-    mpv
+  environment.systemPackages = [
+    pkgs.mpv
   ];
 
   homix = {
