@@ -4,7 +4,6 @@
 {
   imports = [
     ./alacritty
-    ./yazi
     ./zed
     ./amnezia-vpn.nix
     ./firefox.nix

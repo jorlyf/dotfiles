@@ -66,6 +66,7 @@
     pkgs.exiftool
     pkgs.fastfetch
     pkgs.gnused
+    pkgs.kdePackages.dolphin
     pkgs.keepassxc
     pkgs.nil
     pkgs.nixd
