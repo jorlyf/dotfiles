@@ -2,13 +2,11 @@
   "element-iced": {
     "prefix": "$element-iced",
     "body": [
-      "#[derive(Debug, Clone)]",
+      "#[derive(Clone)]",
       "pub enum Message {}",
       "",
-      "#[derive(Debug, Clone)]",
       "pub enum Event {}",
       "",
-      "#[derive(Debug)]",
       "pub struct State {}",
       "",
       "impl State {",
