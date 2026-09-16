@@ -5,6 +5,8 @@
 {
   environment.systemPackages = [
     pkgs.zed-editor
+    pkgs.package-version-server
+    pkgs.bash-language-server
   ];
 
   environment.sessionVariables = {
