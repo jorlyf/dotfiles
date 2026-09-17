@@ -13,6 +13,8 @@ let
           networking.hostName = name;
           nixpkgs.hostPlatform = system;
         }
+        inputs.impermanence.nixosModules.impermanence
+        inputs.disko.nixosModules.disko
         inputs.zapret-discord-youtube.nixosModules.withTestTools
         inputs.agenix.nixosModules.default
         ./${name}

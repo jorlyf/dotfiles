@@ -1,57 +1,8 @@
 {
-  inputs,
   ...
 }:
 {
-  imports = [
-    inputs.impermanence.nixosModules.impermanence
-  ];
-
-  fileSystems = {
-    "/boot" = {
-      neededForBoot = true;
-      device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
-      options = [
-        "umask=0077"
-        "noatime"
-        "discard"
-      ];
-    };
-
-    "/" = {
-      device = "none";
-      fsType = "tmpfs";
-      options = [
-        "size=2G"
-        "mode=755"
-      ];
-    };
-
-    "/nix" = {
-      neededForBoot = true;
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "btrfs";
-      options = [
-        "noatime"
-        "discard"
-        "subvol=@nix"
-        "compress=zstd"
-      ];
-    };
-
-    "/persistent" = {
-      neededForBoot = true;
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "btrfs";
-      options = [
-        "noatime"
-        "discard"
-        "subvol=@persistent"
-        "compress=zstd"
-      ];
-    };
-  };
+  fileSystems."/persistent".neededForBoot = true;
 
   environment.persistence."/persistent" = {
     enable = true;

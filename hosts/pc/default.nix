@@ -17,6 +17,7 @@
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system")
+    ./disko.nix
     ./syncthing.nix
   ];
 
