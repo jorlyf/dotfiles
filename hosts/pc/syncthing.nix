@@ -35,7 +35,10 @@
       folders = {
         "sync" = {
           path = "/home/jorlyf/persistent/sync";
-          devices = [ "honor" "samsung-SM9260" ];
+          devices = [
+            "honor"
+            "samsung-SM9260"
+          ];
         };
       };
     };
