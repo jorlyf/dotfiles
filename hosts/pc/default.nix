@@ -78,6 +78,8 @@
     pkgs.xdg-desktop-portal-termfilechooser
   ];
 
+  system.stateVersion = "26.11";
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.initrd.availableKernelModules = [
