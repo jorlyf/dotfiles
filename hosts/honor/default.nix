@@ -45,9 +45,7 @@
 
   environment.systemPackages = [
     pkgs.devenv
-    pkgs.exiftool
     pkgs.fastfetch
-    pkgs.gnused
     pkgs.kdePackages.dolphin
     pkgs.keepassxc
     pkgs.nil
@@ -57,7 +55,6 @@
     pkgs.podman-tui
     pkgs.qbittorrent
     pkgs.usbutils
-    pkgs.xdg-desktop-portal-termfilechooser
   ];
 
   environment.sessionVariables = {
