@@ -13,7 +13,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/nvme1n1";
+        device = "/dev/disk/by-id/nvme-ADATA_LEGEND_860_2P17292BEGLJ";
         content = {
           type = "gpt";
           partitions = {
