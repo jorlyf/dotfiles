@@ -16,7 +16,7 @@
     (flake.outPath + "/modules/mvsdk.nix")
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system")
-    ./disko.nix
+    ./filesystem.nix
     ./hardware.nix
     ./syncthing.nix
   ];
