@@ -58,9 +58,5 @@
     pkgs.usbutils
   ];
 
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "iHD";
-  };
-
   system.stateVersion = "26.05";
 }
