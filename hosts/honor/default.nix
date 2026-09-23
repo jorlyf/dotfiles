@@ -1,7 +1,5 @@
 {
-  config,
   flake,
-  lib,
   modulesPath,
   pkgs,
   ...
@@ -18,6 +16,7 @@
     (flake.outPath + "/modules/mvsdk.nix")
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system")
+    ./hardware.nix
     ./syncthing.nix
   ];
 
@@ -66,29 +65,4 @@
   };
 
   system.stateVersion = "26.05";
-
-  hardware.graphics = {
-    enable = true;
-    extraPackages = [
-      pkgs.intel-media-driver
-      pkgs.vpl-gpu-rt
-    ];
-  };
-  services.xserver.videoDrivers = [ "modesetting" ];
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "thunderbolt"
-    "nvme"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-
-  hardware.cpu.intel.npu.enable = true;
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

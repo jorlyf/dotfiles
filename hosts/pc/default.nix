@@ -1,7 +1,5 @@
 {
-  config,
   flake,
-  lib,
   modulesPath,
   pkgs,
   ...
@@ -19,6 +17,7 @@
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system")
     ./disko.nix
+    ./hardware.nix
     ./syncthing.nix
   ];
 
@@ -72,33 +71,4 @@
   ];
 
   system.stateVersion = "26.11";
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "ahci"
-    "nvme"
-    "usbhid"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  hardware.graphics = {
-    enable = true;
-  };
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = false;
-    open = true;
-    nvidiaSettings = false;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
 }
