@@ -15,5 +15,6 @@
     ./swayimg.nix
     ./telegram.nix
     ./typst.nix
+    ./wine.nix
   ];
 }
