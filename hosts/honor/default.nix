@@ -18,6 +18,7 @@
     (flake.outPath + "/system")
     ./filesystem.nix
     ./hardware.nix
+    ./powersave.nix
     ./syncthing.nix
   ];
 
@@ -27,22 +28,6 @@
       variable-refresh-rate
     }
   '';
-
-  services.auto-cpufreq = {
-    enable = true;
-    settings = {
-      battery = {
-        governor = "powersave";
-        turbo = "never";
-        energy_performance_preference = "power";
-      };
-      charger = {
-        governor = "performance";
-        turbo = "auto";
-        energy_performance_preference = "balance_performance";
-      };
-    };
-  };
 
   environment.systemPackages = [
     pkgs.devenv
