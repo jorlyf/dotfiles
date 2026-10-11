@@ -1,5 +1,5 @@
 {
-  "disable_ai": true,
+  "disable_ai": false,
   "auto_install_extensions": {
     "catppuccin": true,
     "catppuccin-icons": true,

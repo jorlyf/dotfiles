@@ -13,6 +13,7 @@
     (flake.outPath + "/modules/desktop/services")
     (flake.outPath + "/modules/gaming")
     (flake.outPath + "/modules/homix.nix")
+    (flake.outPath + "/modules/llama.nix")
     (flake.outPath + "/modules/mvsdk.nix")
     (flake.outPath + "/modules/zapret.nix")
     (flake.outPath + "/system")
