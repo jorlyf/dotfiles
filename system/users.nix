@@ -27,6 +27,7 @@
         shell = pkgs.fish;
 
         extraGroups = [
+          "dialout"
           "networkmanager"
           "nix"
           "podman"
