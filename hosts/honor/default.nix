@@ -32,6 +32,7 @@
   environment.systemPackages = [
     pkgs.devenv
     pkgs.fastfetch
+    pkgs.kdePackages.ark
     pkgs.kdePackages.dolphin
     pkgs.keepassxc
     pkgs.nil
