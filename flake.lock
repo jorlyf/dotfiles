@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "amane": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792140988,
+        "narHash": "sha256-z+na5unekDYqbn1heT+2xk3Flh11bpr5oMhmhOEhBW8=",
+        "owner": "MystiaFin",
+        "repo": "amane",
+        "rev": "72e23ebdb6b7692e78a28d7e2662094bf0e780b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MystiaFin",
+        "repo": "amane",
+        "type": "github"
+      }
+    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": [
@@ -158,6 +178,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "amane": "amane",
         "catppuccin": "catppuccin",
         "disko": "disko",
         "impermanence": "impermanence",
