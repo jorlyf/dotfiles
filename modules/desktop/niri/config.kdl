@@ -25,7 +25,6 @@ window-rule {
 }
 
 cursor {
-  xcursor-theme "catppuccin-frappe-lavender-cursors"
   xcursor-size 36
 
   hide-after-inactive-ms 2500
