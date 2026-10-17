@@ -1,11 +1,5 @@
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 
-// Черное окно уведомлений mako при записи экрана.
-layer-rule {
-  match namespace="^notifications$"
-  block-out-from "screencast"
-}
-
 // Черное окно KeePassXC при записи экрана.
 window-rule {
   match app-id="^org\\.keepassxc\\.KeePassXC$"
