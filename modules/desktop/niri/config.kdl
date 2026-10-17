@@ -64,11 +64,6 @@ input {
 layout {
   gaps 16
 
-  struts {
-    // Для ashell
-    bottom -8
-  }
-
   center-focused-column "never"
 
   background-color "#303446"
