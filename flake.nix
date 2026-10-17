@@ -27,6 +27,10 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    amane = {
+      url = "github:MystiaFin/amane";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

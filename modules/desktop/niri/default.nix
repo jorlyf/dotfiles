@@ -8,9 +8,9 @@
 {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
-    ./ashell
+    ./amane
     ./fuzzel
-    ./mako
+    # ./mako
   ];
 
   options = {
@@ -44,24 +44,22 @@
 
     environment.systemPackages = [
       pkgs.brightnessctl
-      pkgs.catppuccin-cursors.frappeLavender
+      # pkgs.catppuccin-cursors.frappeLavender
       pkgs.cliphist
       pkgs.libnotify
       pkgs.playerctl
-      pkgs.swayidle
-      pkgs.swaylock
       pkgs.wl-clipboard
       pkgs.xdg-desktop-portal-gnome
       pkgs.xdg-desktop-portal-gtk
       pkgs.xwayland-satellite
     ];
 
-    catppuccin = {
-      autoEnable = true;
-      enable = true;
-      flavor = "frappe";
-      accent = "lavender";
-    };
+    # catppuccin = {
+    #   autoEnable = true;
+    #   enable = true;
+    #   flavor = "frappe";
+    #   accent = "lavender";
+    # };
 
     xdg = {
       portal = {
