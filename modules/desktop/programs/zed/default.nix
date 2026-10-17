@@ -15,7 +15,7 @@
 
   homix = {
     ".config/zed/settings.json".source = ./config.jsonc;
-    ".config/zed/themes/catppuccin-no-italics-lavender.json.json".source =
+    ".config/zed/themes/catppuccin-no-italics-lavender.json".source =
       ./catppuccin-no-italics-lavender.json;
     ".config/zed/snippets/rust.json".source = ./snippets/rust.json;
   };
