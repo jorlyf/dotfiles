@@ -22,6 +22,14 @@
     ./syncthing.nix
   ];
 
+  boot.loader.limine = {
+    extraEntries = ''
+      /Windows
+      protocol: efi
+      path: uuid(461af4b3-990a-4104-bbea-54ff91596a6d):/EFI/Microsoft/Boot/bootmgfw.efi
+    '';
+  };
+
   niri-config-append-lines = ''
     output "Tianma Microelectronics Ltd. TL160MDMP01 Unknown" {
       mode "3072x1920"
