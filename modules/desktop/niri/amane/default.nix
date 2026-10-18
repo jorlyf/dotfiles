@@ -14,7 +14,7 @@
   environment.persistence."/persistent" = {
     users.jorlyf = {
       directories = [
-        ".config/amane"
+        ".local/state/amane"
       ];
     };
   };
