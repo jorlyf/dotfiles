@@ -11,6 +11,7 @@
     ./git.nix
     ./kdeconnect.nix
     ./mpv.nix
+    ./nix-ld.nix
     ./obs-studio.nix
     ./swayimg.nix
     ./telegram.nix
