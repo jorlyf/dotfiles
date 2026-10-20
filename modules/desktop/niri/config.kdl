@@ -123,7 +123,6 @@ binds {
   Mod+T     hotkey-overlay-title="Открыть терминал"               { spawn "alacritty"; }
   Mod+Space hotkey-overlay-title="Открыть лаунчер"                { spawn "amane" "ipc" "call" "launcher" "toggle"; }
   Mod+L     hotkey-overlay-title="Заблокировать экран"            { spawn "amane" "ipc" "call" "lock"; }
-  Mod+P     hotkey-overlay-title="Отключить мониторы"             { power-off-monitors; }
 
   Mod+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
 
