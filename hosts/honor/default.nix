@@ -6,14 +6,14 @@
 }:
 {
   imports = [
-    (modulesPath + "/hardware/cpu/intel-npu.nix")
-    (modulesPath + "/installer/scan/not-detected.nix")
-    (flake.outPath + "/modules/desktop")
-    (flake.outPath + "/modules/gaming")
-    (flake.outPath + "/modules/homix.nix")
-    (flake.outPath + "/modules/mvsdk.nix")
-    (flake.outPath + "/modules/zapret.nix")
-    (flake.outPath + "/system")
+    "${modulesPath}/hardware/cpu/intel-npu.nix"
+    "${modulesPath}/installer/scan/not-detected.nix"
+    "${flake.outPath}/modules/desktop"
+    "${flake.outPath}/modules/gaming"
+    "${flake.outPath}/modules/homix.nix"
+    "${flake.outPath}/modules/mvsdk.nix"
+    "${flake.outPath}/modules/zapret.nix"
+    "${flake.outPath}/system"
     ./filesystem.nix
     ./hardware.nix
     ./powersave.nix
