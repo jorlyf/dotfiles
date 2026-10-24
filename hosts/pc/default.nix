@@ -8,9 +8,7 @@
   imports = [
     (modulesPath + "/hardware/cpu/intel-npu.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
-    (flake.outPath + "/modules/desktop/niri")
-    (flake.outPath + "/modules/desktop/programs")
-    (flake.outPath + "/modules/desktop/services")
+    (flake.outPath + "/modules/desktop")
     (flake.outPath + "/modules/gaming")
     (flake.outPath + "/modules/homix.nix")
     (flake.outPath + "/modules/mvsdk.nix")
