@@ -39,6 +39,12 @@
             "honor"
             "samsung-SM9260"
           ];
+          versioning = {
+            type = "trashcan";
+            params = {
+              cleanoutDays = "60";
+            };
+          };
         };
       };
     };
