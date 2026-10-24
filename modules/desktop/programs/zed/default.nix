@@ -3,14 +3,22 @@
   ...
 }:
 {
-  environment.systemPackages = [
-    pkgs.zed-editor
-    pkgs.package-version-server
-    pkgs.bash-language-server
-  ];
-
-  environment.sessionVariables = {
-    EDITOR = "zeditor --wait";
+  environment = {
+    systemPackages = [
+      pkgs.zed-editor
+      pkgs.package-version-server
+      pkgs.bash-language-server
+    ];
+    sessionVariables = {
+      EDITOR = "zeditor --wait";
+    };
+    persistence."/persistent" = {
+      users.jorlyf = {
+        directories = [
+          ".local/share/zed"
+        ];
+      };
+    };
   };
 
   homix = {

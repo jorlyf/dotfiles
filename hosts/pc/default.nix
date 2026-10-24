@@ -56,13 +56,8 @@
     pkgs.fastfetch
     pkgs.kdePackages.ark
     pkgs.kdePackages.dolphin
-    pkgs.keepassxc
     pkgs.nil
     pkgs.nixd
-    pkgs.onlyoffice-desktopeditors
-    pkgs.podman-compose
-    pkgs.podman-tui
-    pkgs.qbittorrent
     pkgs.usbutils
   ];
 

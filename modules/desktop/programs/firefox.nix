@@ -13,7 +13,20 @@
       "media.av1.enabled" = true;
     };
   };
-  environment.sessionVariables = {
-    MOZ_DISABLE_RDD_SANDBOX = "1";
+
+  environment = {
+    sessionVariables = {
+      MOZ_DISABLE_RDD_SANDBOX = "1";
+    };
+    persistence."/persistent" = {
+      users.jorlyf = {
+        directories = [
+          ".config/mozilla/firefox"
+        ];
+        files = [
+          ".mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json"
+        ];
+      };
+    };
   };
 }

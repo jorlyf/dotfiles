@@ -26,34 +26,11 @@
       directories = [
         ".ssh"
         ".cache"
-        ".config/discord"
-        ".config/fish"
-        ".config/kdeconnect"
-        ".config/keepassxc"
-        ".config/mozilla/firefox"
-        ".config/obs-studio"
-        ".config/onlyoffice"
-        ".local/share/containers"
         ".local/share/devenv"
         ".local/share/direnv"
-        ".local/share/fish"
-        ".local/share/kdeconnect"
-        ".local/share/onlyoffice"
-        ".local/share/PrismLauncher"
-        ".local/share/Steam"
-        ".local/share/TelegramDesktop"
-        ".local/share/zed"
         ".local/state/pipewire"
         ".local/state/wireplumber"
         "persistent"
-        "Documents"
-        "Downloads"
-        "Pictures"
-        "Videos"
-      ];
-
-      files = [
-        ".mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json"
       ];
     };
   };

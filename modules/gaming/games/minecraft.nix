@@ -38,8 +38,17 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [
-      prismlauncher-cracked-fixed
-    ];
+    environment = {
+      systemPackages = [
+        prismlauncher-cracked-fixed
+      ];
+      persistence."/persistent" = {
+        users.jorlyf = {
+          directories = [
+            ".local/share/PrismLauncher"
+          ];
+        };
+      };
+    };
   };
 }

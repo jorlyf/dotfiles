@@ -10,10 +10,12 @@
     ./fish.nix
     ./git.nix
     ./kdeconnect.nix
+    ./keepassxc.nix
     ./localsend.nix
     ./mpv.nix
     ./nix-ld.nix
     ./obs-studio.nix
+    ./onlyoffice.nix
     ./swayimg.nix
     ./telegram.nix
     ./typst.nix

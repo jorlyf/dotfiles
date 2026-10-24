@@ -22,4 +22,13 @@
       RestartSec = 5;
     };
   };
+
+  environment.persistence."/persistent" = {
+    users.jorlyf = {
+      directories = [
+        ".config/kdeconnect"
+        ".local/share/kdeconnect"
+      ];
+    };
+  };
 }
