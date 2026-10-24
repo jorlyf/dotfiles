@@ -10,6 +10,7 @@
     ./fish.nix
     ./git.nix
     ./kdeconnect.nix
+    ./localsend.nix
     ./mpv.nix
     ./nix-ld.nix
     ./obs-studio.nix
