@@ -16,6 +16,8 @@
     ./nix-ld.nix
     ./obs-studio.nix
     ./onlyoffice.nix
+    ./qbittorrent.nix
+    ./resources.nix
     ./swayimg.nix
     ./telegram.nix
     ./typst.nix
