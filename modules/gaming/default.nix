@@ -25,6 +25,7 @@
         directories = [
           ".config/discord"
           ".local/share/Steam"
+          ".steam"
         ];
       };
     };
