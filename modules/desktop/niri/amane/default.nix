@@ -11,6 +11,12 @@
     enable = true;
   };
 
+  homix = {
+    ".local/state/amane/config-path".text = ''
+      /home/jorlyf/persistent/amane-cfg
+    '';
+  };
+
   environment.persistence."/persistent" = {
     users.jorlyf = {
       directories = [
