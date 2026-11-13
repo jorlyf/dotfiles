@@ -8,6 +8,10 @@
   services.gnome.gnome-keyring.enable = lib.mkForce false;
 
   security = {
+    polkit = {
+      enable = true;
+    };
+
     pam = {
       services = {
         login.enableGnomeKeyring = lib.mkForce false;
