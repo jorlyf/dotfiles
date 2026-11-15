@@ -23,5 +23,6 @@ in
 
   homix = {
     ".config/strata/settings.toml".source = ./settings.toml;
+    ".config/gtk-3.0/bookmarks".source = ./bookmarks;
   };
 }
