@@ -5,6 +5,7 @@
   imports = [
     ./alacritty
     ./incy
+    ./strata
     ./zed
     ./amnezia-vpn.nix
     ./firefox.nix

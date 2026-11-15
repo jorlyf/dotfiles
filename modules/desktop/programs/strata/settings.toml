@@ -1,0 +1,89 @@
+arrow_navigation_scoped = false
+browser_column_width = 353
+browser_density = "compact"
+browser_density_custom_px = 0
+browser_mode = "list"
+case_sensitive_sort = false
+check_for_updates = true
+columns_mirror_selection = true
+columns_show_sizes = true
+corner_roundness = 60
+cross_volume_drop_strategy = "always-ask"
+date_format = "relative"
+element_glow = false
+explorer_file_clicks = 2
+explorer_folder_clicks = 2
+file_icon_colors = "brand"
+filter_include_subfolders = true
+folder_peeking = false
+folders_first = true
+frame_density = "compact"
+frame_density_custom_px = 0
+grid_file_clicks = 2
+grid_folder_clicks = 2
+group_by_type = false
+icons_thumbnail_size = 64
+interface_renderer = "system"
+language = "auto"
+list_file_clicks = 2
+list_folder_clicks = 2
+mode = "theme"
+natural_sort = true
+open_folder_after_drop = false
+preview_autoplay = false
+preview_muted = false
+preview_text_wrap = true
+preview_video_start = 0
+preview_volume = 1.0
+reduce_motion = false
+release_channel = "stable"
+remember_folder_views = true
+render_documents_by_default = true
+restore_tabs = false
+search_entry_limit = 200000
+search_open_files_directly = false
+search_time_limit = 10
+show_hidden = true
+show_keybinding_hints = true
+show_thumbnails = true
+sidebar_compact = false
+sidebar_devices_collapsed = false
+sidebar_expanded = true
+sidebar_order = [
+    "home",
+    "desktop",
+    "documents",
+    "downloads",
+    "music",
+    "pictures",
+    "videos",
+    "recent",
+    "network",
+    "trash",
+]
+sidebar_pinned_collapsed = false
+sidebar_show_desktop = false
+sidebar_show_documents = false
+sidebar_show_downloads = true
+sidebar_show_home = true
+sidebar_show_music = false
+sidebar_show_network = true
+sidebar_show_pictures = false
+sidebar_show_recent = true
+sidebar_show_trash = true
+sidebar_show_videos = false
+single_click_previews = true
+sort_direction = "ascending"
+sort_key = "name"
+stl_thumbnails = false
+tenxer_mode = false
+text_size = 14
+theme = "catppuccin-frappe"
+thumbnail_workers = 4
+type_to_search = true
+unit_system = "metric"
+video_preview_backend = "automatic"
+watch_network_folders = true
+window_show_close = true
+window_show_maximize = false
+window_show_minimize = false

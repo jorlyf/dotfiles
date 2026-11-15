@@ -38,8 +38,6 @@
   environment.systemPackages = [
     pkgs.devenv
     pkgs.fastfetch
-    pkgs.kdePackages.ark
-    pkgs.kdePackages.dolphin
     pkgs.nil
     pkgs.nixd
     pkgs.usbutils
