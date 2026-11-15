@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   pkgs,
   ...
 }:
@@ -11,11 +12,19 @@ in
 
   xdg = {
     portal = {
+      enable = true;
       extraPortals = [ strata.fileChooserPortal ];
-      config.common."org.freedesktop.impl.portal.FileChooser" = [
-        "strata"
-        "gtk"
-      ];
+      config = {
+        common."org.freedesktop.impl.portal.FileChooser" = lib.mkForce [
+          "strata"
+          "gtk"
+        ];
+        niri."org.freedesktop.impl.portal.FileChooser" = lib.mkForce [
+          "strata"
+          "gnome"
+          "gtk"
+        ];
+      };
     };
   };
 
